@@ -1,0 +1,177 @@
+m255
+K4
+z2
+!s11e vcom 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/tarahidigital/p
+T_opt
+!s110 1657463092
+VIh[2m`7jFle7j3f^RVCVZ3
+Z1 04 9 5 work my_fsm_tb bench 1
+=1-ac9e17bed26f-62cae133-312-3a60
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+T_opt1
+!s110 1657392464
+VgdOkJcQG[]7biPF`Z`<4F1
+R1
+=1-ac9e17bed26f-62c9cd50-137-4314
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+Emy_fsm
+Z4 w1657463064
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 40
+Z7 dE:/tarahidigital/finalProject
+Z8 8E:/tarahidigital/finalProject/watering_main.vhd
+Z9 FE:/tarahidigital/finalProject/watering_main.vhd
+l0
+L29 1
+V1>LfV;WS:8ga4Ag>IPjk?2
+!s100 cGaV;OzG=?z[PAgQG<ZoN3
+Z10 OL;C;2020.4;71
+32
+Z11 !s110 1657463080
+!i10b 1
+Z12 !s108 1657463079.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/tarahidigital/finalProject/watering_main.vhd|
+Z14 !s107 E:/tarahidigital/finalProject/watering_main.vhd|
+!i113 0
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Afsm
+R5
+R6
+DEx4 work 6 my_fsm 0 22 1>LfV;WS:8ga4Ag>IPjk?2
+!i122 40
+l49
+L37 85
+V<fmT3k09hIGGm6:gF7WMG3
+!s100 MV>40]]CdJ0[jVVakZ_RO3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Emy_fsm_tb
+Z17 w1657462775
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R5
+R6
+!i122 41
+R7
+Z19 8E:/tarahidigital/finalProject/watering_main_tb.vhd
+Z20 FE:/tarahidigital/finalProject/watering_main_tb.vhd
+l0
+L4 1
+VFG^kCcZ;n<>TA>AhHoo??1
+!s100 @`NiUH4DKflV6mnfoQ9P^1
+R10
+32
+R11
+!i10b 1
+Z21 !s108 1657463080.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/tarahidigital/finalProject/watering_main_tb.vhd|
+Z23 !s107 E:/tarahidigital/finalProject/watering_main_tb.vhd|
+!i113 0
+R15
+R16
+Abench
+R18
+R5
+R6
+DEx4 work 9 my_fsm_tb 0 22 FG^kCcZ;n<>TA>AhHoo??1
+!i122 41
+l24
+L6 84
+VDWO`@K[[8HjoiJIlkfdH^3
+!s100 MT1cFfKmT6^ZR=n42n13l0
+R10
+32
+R11
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R15
+R16
+Eseg7
+R4
+R5
+R6
+!i122 40
+R7
+R8
+R9
+l0
+L4 1
+VQaXdV=1[ZB^XBQ6mF6R@X2
+!s100 9Lai=Y0cFi8TLZnGK5^dU1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Abehavioral
+R5
+R6
+DEx4 work 4 seg7 0 22 QaXdV=1[ZB^XBQ6mF6R@X2
+!i122 40
+l11
+L9 18
+VkBzSYWRLL5R>VI8Z67?]o0
+!s100 h2VochZWOVg<W^R6fJE0R2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Pwatering
+R5
+R6
+!i122 42
+w1657462766
+R7
+8E:/tarahidigital/finalProject/packaging.vhd
+FE:/tarahidigital/finalProject/packaging.vhd
+l0
+L4 1
+V>GSO:fNT@eGj<j98I9QBR0
+!s100 [FYZE9lkn6QdQ2o3<S9TO3
+R10
+32
+R11
+!i10b 1
+R21
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/tarahidigital/finalProject/packaging.vhd|
+!s107 E:/tarahidigital/finalProject/packaging.vhd|
+!i113 0
+R15
+R16

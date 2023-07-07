@@ -1,0 +1,121 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Seg7 is
+    Port ( waterState: in STD_LOGIC_VECTOR (3 downto 0);
+           segment7 : out STD_LOGIC_VECTOR (6 downto 0) ); 
+end Seg7;
+
+architecture Behavioral of Seg7 is
+
+begin
+
+ myproc: process (waterState)
+    begin
+
+               if (waterState = "1111") then      
+                   segment7 <= "1000000";  -- 'H'
+
+               else           
+                   segment7 <= "1110110"; -- dash
+
+               end if;
+
+    end process;
+
+end Behavioral;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity my_fsm is
+  port (T, L, CLK, RESET : in std_logic;
+               M : in std_logic_vector (2 downto 0);
+                    -- fsm_situation : out std_logic_vector(1 downto 0);
+                    segments : out std_logic_vector (6 downto 0);
+                    fsm_output :   out std_logic);
+          
+end my_fsm;
+architecture fsm of my_fsm is
+component Seg7 
+    port (waterState : STD_LOGIC_VECTOR (3 downto 0);
+          segment7 : out std_logic_vector (6 downto 0));
+end component;
+  subtype state_type is std_logic_vector (1 downto 0);
+  constant ST0 : state_type := "00";
+  constant ST1 : state_type := "01";
+  constant ST2 : state_type := "11";
+
+  Signal PS, NS : state_type;
+  Signal X : std_logic_vector (3 downto 0);
+begin
+     segment7: Seg7 port map (waterState => X,
+            segment7 => segments);
+     process(CLK, NS, RESET)
+     begin
+    if (RESET = '1') then
+                    PS <= ST0;
+    elsif rising_edge(CLK) then
+                    PS <= NS;
+    end if;
+     end process ;
+
+ 
+
+     process(PS, T, L, M)
+        begin
+    --fsm_output <= '0';
+    case PS is
+      when ST0 => 
+        if (T = '1' or L = '1') and (M <= "001") then
+                                   NS <= ST1; 
+                                  -- fsm_output <= '1'; 
+                                   X <= "1111";
+                              
+        elsif (T = '0' and L = '0') and (M <= "011") then 
+                                     NS <= ST1; 
+                                     --fsm_output <= '1'; 
+                                     X <= "1111"; 
+                              
+        else 
+                                   NS <= ST0; 
+                                  -- fsm_output <= '0'; 
+                                   X <= "0000"; 
+                              
+        end if;
+      when ST1 =>
+        If (M >= "111") then
+                                     NS <= ST0;
+                                     --fsm_output <= '0';
+                                     X <= "0000";
+                                 
+        elsif (M >= "011") and (T = '1' or L = '1') then 
+                                   NS <= ST0; 
+                                  -- fsm_output <= '0'; 
+                                   X <= "0000";
+                           
+        else 
+                                   NS <= ST1;
+                                   --fsm_output <= '1';
+                                   X <= "1111";
+                          
+        end if;
+      when others =>    -- (ST2)
+                                NS <= ST0;
+        --fsm_output <= '0';
+                                X <= "0000"; 
+                          
+    end case;
+        end process;
+       --with PS select
+     --fsm_situation <= "00" when ST0,
+            -- "01" when ST1,
+           --  "11" when others;
+         third_process : process(PS)
+           begin
+            if(PS=ST0) then
+              fsm_output <= '0' ;
+            else
+              fsm_output <= '1' ;
+            
+           end if;
+         end process third_process;
+end fsm;

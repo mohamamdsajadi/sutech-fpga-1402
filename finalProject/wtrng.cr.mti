@@ -1,0 +1,27 @@
+E:/tarahidigital/finalProject/watering_main.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/tarahidigital/finalProject/watering_main.vhd
+Model Technology ModelSim SE-64 vcom 2020.4 Compiler 2020.10 Oct 13 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Seg7
+-- Compiling architecture Behavioral of Seg7
+-- Compiling entity my_fsm
+-- Compiling architecture fsm of my_fsm
+
+} {} {}} E:/tarahidigital/finalProject/packaging.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/tarahidigital/finalProject/packaging.vhd
+Model Technology ModelSim SE-64 vcom 2020.4 Compiler 2020.10 Oct 13 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package WATERING
+
+} {} {}} E:/tarahidigital/finalProject/watering_main_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/tarahidigital/finalProject/watering_main_tb.vhd
+Model Technology ModelSim SE-64 vcom 2020.4 Compiler 2020.10 Oct 13 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity my_fsm_tb
+-- Compiling architecture bench of my_fsm_tb
+
+} {} {}}
